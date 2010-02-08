@@ -9,7 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100207140329) do
+ActiveRecord::Schema.define(:version => 20100207152934) do
+
+  create_table "apartments", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "subscriber_id"
+    t.integer  "subscriptable_id"
+    t.string   "subscriptable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "train_tickets", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",               :null => false

@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :account, :controller => "users"
   map.resources :users
+  map.signup '/signup', :controller => "users", :action => "new"
   
   map.with_options :controller => "user_sessions" do |m|
     m.root :action => "new"
